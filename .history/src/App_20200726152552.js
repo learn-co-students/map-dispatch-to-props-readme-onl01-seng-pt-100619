@@ -6,9 +6,9 @@ import { addItem } from  './actions/items';
 class App extends Component {
  
   handleOnClick = event => {
-    this.props.addItem()
+    this.props.addItem() // Code change: this.props.store.dispatch is no longer being called
   }
-
+ 
   render() {
     debugger
     return (
@@ -40,4 +40,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
  
-export default connect(state => ({ items: state.items }))(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
