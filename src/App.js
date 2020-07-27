@@ -8,7 +8,7 @@ class App extends Component {
   handleOnClick() {
     this.props.store.dispatch(addItem());
   }
-
+ 
   render() {
     return (
       <div className="App">
